@@ -6,19 +6,27 @@ class EmptyCart extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <Image
-            source={require("../../assets/empty-bag.png")}
-            style={{ width: 150, height: 150, marginBottom: 12 }}
-          />
+          <View style={{ justifyContent: "center", alignItems: "center" }}>
+            <Image
+              source={{
+                uri:
+                  "https://www.diningbutler.com/web_db/sg/images/benefitproductips/products/fnb-modules01a.png"
+              }}
+              style={{
+                width: 150,
+                height: 150,
+                marginBottom: 12
+              }}
+            />
+          </View>
           <Text
             style={{
               textAlign: "center",
               color: "#ef6136",
-              fontSize: 18,
-              opacity: 0.55
+              fontSize: 18
             }}
           >
-            Cart is empty!
+            Your order is confirmed! Come by in 10 minutes
           </Text>
         </View>
       </View>
