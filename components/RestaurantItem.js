@@ -74,15 +74,6 @@ export default class RestaurantItem extends React.Component {
               }}
             >
               {this.props.cuisine},{" "}
-              {this.props.isVegetarian ? (
-                <Text style={{ color: "#4caf50", fontWeight: "bold" }}>
-                  Veg
-                </Text>
-              ) : (
-                <Text style={{ color: "#a92319", fontWeight: "bold" }}>
-                  Non-Veg
-                </Text>
-              )}
             </Text>
             <Text
               style={{
