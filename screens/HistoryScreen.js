@@ -3,6 +3,7 @@ import { View, Text, FlatList } from "react-native";
 import { Gravatar, Card } from "nachos-ui";
 import ListItem from "../components/ListItem";
 import history from "../api/activity/history";
+import { Tabs, Tab, Container } from 'native-base'
 
 const gravatarStyle = {
   margin: 15
@@ -25,23 +26,37 @@ export default class SettingsScreen extends React.Component {
     const cardStyle = { margin: 15, width: 280 };
 
     return (
-      <View>
-        <FlatList
-          data={history}
-          keyExtractor={item => item.id}
-          renderItem={({ item }) => (
-            <ListItem
-              key={item.id}
-              name={item.name}
-              image={`https://picsum.photos/280/280/?image=${9 + item.id}`}
-              cuisine={item.cuisine}
-              price={item.price}
-              label={item.restaurant}
-              handleNaviagation={() => {}}
-            />
-          )}
-        />
-      </View>
+   
+        <Container>
+        <Tabs>
+          <Tab heading={`Order History`}>
+          
+          <FlatList
+            data={history}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => (
+              <ListItem
+                key={item.id}
+                name={item.name}
+                image={`https://picsum.photos/280/280/?image=${9 + item.id}`}
+                cuisine={item.cuisine}
+                price={item.price}
+                label={item.restaurant}
+
+                handleNaviagation={() => {}}
+              />
+            )}
+          />
+          
+        </Tab>
+        <Tab heading={`Achievements`}>
+              <Text>
+                You are a pro!
+              </Text>
+        </Tab>
+        </Tabs>
+        </Container>
+ 
     );
   }
 }
