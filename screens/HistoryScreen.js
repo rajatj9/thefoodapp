@@ -30,7 +30,7 @@ export default class SettingsScreen extends React.Component {
 
      <View>
         <Achievements />
-
+        <Text> Past Orders</Text>
         <PastOrders />
       </View>
 

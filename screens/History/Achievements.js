@@ -10,7 +10,7 @@ export default class Achievements extends React.Component {
             <Card style={{marginLeft:20, marginRight:20, marginTop: 15}}>
                 <CardItem>
                     <Body>
-                        <Text style={{fontSize: 20, marginRight: 40, marginTop: 20}}>
+                        <Text style={{fontSize: 20, justifyContent: 'center', alignItems: 'center', marginTop: 5}}>
                         Current progress    
                         </Text>
                     </Body>
@@ -22,7 +22,7 @@ export default class Achievements extends React.Component {
     resizeMode: 'contain', margin: 5}}/>
                 </CardItem>
                 <CardItem>
-                    <Text>
+                    <Text style={{fontSize: 17,justifyContent: 'center', alignItems: 'center'}}>
                         4 full meals away from a free meal!
                         </Text>
                 </CardItem>

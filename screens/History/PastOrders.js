@@ -1,8 +1,9 @@
 import React from "react";
 import { FlatList } from "react-native";
 
-import ListItem from "../../components/ListItem";
+
 import history from "../../api/activity/history";
+import ListItemHistory from "../../components/ListItemHistory";
 
 export default class PastOrders extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class PastOrders extends React.Component {
         data={history}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <ListItem
+          <ListItemHistory
             key={item.id}
             name={item.name}
             image={`https://picsum.photos/280/280/?image=${9 + item.id}`}
