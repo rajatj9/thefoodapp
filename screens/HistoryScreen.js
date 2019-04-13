@@ -1,8 +1,8 @@
 import React from "react";
 import { Gravatar } from "nachos-ui";
-import { Tabs, Tab, Container } from 'native-base';
-import Achievements from './History/Achievements';
-import PastOrders from './History/PastOrders';
+import { Tabs, Tab, Container } from "native-base";
+import Achievements from "./History/Achievements";
+import PastOrders from "./History/PastOrders";
 
 const gravatarStyle = {
   margin: 15
