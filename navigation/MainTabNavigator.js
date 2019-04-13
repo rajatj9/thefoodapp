@@ -11,11 +11,13 @@ import LinksScreen from "../screens/LinksScreen";
 import HistoryScreen from "../screens/HistoryScreen";
 import Dishes from "../components/Dishes";
 import Cart from "../components/Cart";
+import Confirmation from "../components/Confirmation";
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
   Dishes: Dishes,
-  Cart: Cart
+  Cart: Cart,
+  Confirmation: Confirmation
 });
 
 HomeStack.navigationOptions = {

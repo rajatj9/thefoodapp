@@ -48,49 +48,50 @@ export default class ListItem extends React.Component {
           />
           <View
             style={{
-              padding: 5
+              padding: 5,
+              flex: 1,
+              flexDirection: "row",
+              justifyContent: "space-between"
             }}
           >
-            <Text
-              style={{
-                fontSize: 18,
-                color: "#333"
-              }}
-            >
-              {this.props.name}
-            </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: "#666"
-              }}
-            >
-              {this.props.cuisine}
-            </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: "#999"
-              }}
-            >
-              {this.props.label}
-            </Text>
+            <View>
+              <Text
+                style={{
+                  fontSize: 18,
+                  color: "#333"
+                }}
+              >
+                {this.props.name}
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  color: "#666"
+                }}
+              >
+                {this.props.cuisine}
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  color: "#999"
+                }}
+              >
+                {this.props.label}
+              </Text>
 
-            <Text
-              style={{
-                fontSize: 21,
-                fontWeight: "bold",
-                color: "#ef6136"
-              }}
-            >
-              {this.props.price}
-            </Text>
-            <View
-              style={{
-                marginLeft: 120
-              }}
-            >
-              <Button small primary>
+              <Text
+                style={{
+                  fontSize: 21,
+                  fontWeight: "bold",
+                  color: "#ef6136"
+                }}
+              >
+                {this.props.price}
+              </Text>
+            </View>
+            <View>
+              <Button small warning>
                 <Text
                   style={{
                     fontSize: 15,
@@ -100,7 +101,7 @@ export default class ListItem extends React.Component {
                     marginRight: 4
                   }}
                 >
-                  Ordered: {this.props.quantity}
+                  {this.props.quantity || "+"}
                 </Text>
               </Button>
             </View>
