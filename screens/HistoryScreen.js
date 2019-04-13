@@ -1,8 +1,9 @@
 import React from "react";
 import { Gravatar } from "nachos-ui";
-import { Tabs, Tab, Container } from "native-base";
-import Achievements from "./History/Achievements";
+import { Text } from "react-native";
+import { Tabs, Tab, Container, Badge } from "native-base";
 import PastOrders from "./History/PastOrders";
+import history from "../api/activity/history";
 
 const gravatarStyle = {
   margin: 15
@@ -24,14 +25,18 @@ export default class SettingsScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Tabs>
-          <Tab heading={`Order History`}>
-            <PastOrders />
-          </Tab>
-          <Tab heading={`Achievements`}>
-            <Achievements />
-          </Tab>
-        </Tabs>
+        <Container style={{ flex: 1, flexDirection: "row" }}>
+          {history.map(order => (
+            <Badge
+              key={order.id}
+              success={(order.eaten >= 90 && true) || false}
+              style={{ margin: 5 }}
+            >
+              <Text style={{ color: "white" }}>{order.eaten}</Text>
+            </Badge>
+          ))}
+        </Container>
+        <PastOrders />
       </Container>
     );
   }
