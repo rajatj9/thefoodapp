@@ -6,7 +6,7 @@ import {
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from "../components/Restaurants";
 import LinksScreen from "../screens/LinksScreen";
 import HistoryScreen from "../screens/HistoryScreen";
 
