@@ -73,6 +73,11 @@ export default class Achievements extends React.Component {
           />
                 </CardItem>
             </Card>
+        
+
+        
+       
+        
         )
     }
 }

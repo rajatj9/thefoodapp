@@ -1,7 +1,7 @@
 import React from "react";
 import { Gravatar } from "nachos-ui";
-import { Text } from "react-native";
-import { Tabs, Tab, Container, Badge, View } from "native-base";
+import { Text, StyleSheet } from "react-native";
+import { Tabs, Tab, Container, Badge, View, Card } from "native-base";
 import PastOrders from "./History/PastOrders";
 import history from "../api/activity/history";
 import ProgressBarAnimated from 'react-native-progress-bar-animated';
@@ -30,6 +30,23 @@ export default class SettingsScreen extends React.Component {
 
      <View>
         <Achievements />
+      
+        <Card style={{marginLeft:20, marginRight:20}}>
+        <View style={styles.container}>
+              <View style={styles.buttonContainer}>
+                <Text> Visits </Text>
+                <Text> 36 </Text>
+              </View>
+              <View style={styles.buttonContainer}>
+                <Text> Full Meals </Text>
+                <Text> 16 </Text>
+              </View>
+              <View style={styles.buttonContainer}>
+                <Text> Waste Meals </Text>
+                <Text> 20 </Text>
+              </View>
+            </View>
+        </Card>
         <Text> Past Orders</Text>
         <PastOrders />
       </View>
@@ -37,3 +54,17 @@ export default class SettingsScreen extends React.Component {
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  buttonContainer: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+  }
+});
