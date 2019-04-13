@@ -1,24 +1,43 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { Card, CardItem, Body, Text } from 'native-base'
+import { Card, CardItem, Body, Text, Thumbnail, Left, Right } from 'native-base'
+import ProgressBarAnimated from 'react-native-progress-bar-animated';
+
 
 export default class Achievements extends React.Component {
     render() {
         return (
-            <Card>
+            <Card style={{marginLeft:20, marginRight:20, marginTop: 15}}>
                 <CardItem>
                     <Body>
-                        <Text style={{
-                            fontSize: 21,
-                            fontWeight: "bold",
-                            color: "#ef6136"
-                        }}>
-                            You have 10,000 Green Points
+                        <Text h1>
+                        Latest Achievements    
                         </Text>
                     </Body>
                 </CardItem>
                 <CardItem cardBody> 
-                    <Image source={{uri: 'http://www.liberaldictionary.com/wp-content/uploads/2019/01/achievement-9166.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+                    <Image source={{uri: 'https://www.accenture.com/t00010101T000000Z__w__/gb-en/_acnmedia/Accenture/next-gen-6/post-and-parcel-infographic/animated/Accenture-Badge.gifla=en-GB'}} style={{ flex: 1,
+    width: 130,
+    height: 130,
+    resizeMode: 'contain', margin: 15}}/>
+                </CardItem>
+                <CardItem>
+                <ProgressBarAnimated
+            value={100}
+            width={75}
+          />
+          <ProgressBarAnimated
+            value={80}
+            width={75}
+          />
+          <ProgressBarAnimated
+            value={0}
+            width={75}
+          />
+          <ProgressBarAnimated
+            value={0}
+            width={75}
+          />
                 </CardItem>
             </Card>
         )
