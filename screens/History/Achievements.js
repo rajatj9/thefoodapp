@@ -10,33 +10,66 @@ export default class Achievements extends React.Component {
             <Card style={{marginLeft:20, marginRight:20, marginTop: 15}}>
                 <CardItem>
                     <Body>
-                        <Text h1>
-                        Latest Achievements    
+                        <Text style={{fontSize: 20, marginRight: 40, marginTop: 20}}>
+                        Current progress    
                         </Text>
                     </Body>
                 </CardItem>
                 <CardItem cardBody> 
-                    <Image source={{uri: 'https://www.accenture.com/t00010101T000000Z__w__/gb-en/_acnmedia/Accenture/next-gen-6/post-and-parcel-infographic/animated/Accenture-Badge.gifla=en-GB'}} style={{ flex: 1,
-    width: 130,
-    height: 130,
-    resizeMode: 'contain', margin: 15}}/>
+                    <Image source={{uri: 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/gift-icon.png'}} style={{ flex: 1,
+    width: 100,
+    height: 100,
+    resizeMode: 'contain', margin: 5}}/>
+                </CardItem>
+                <CardItem>
+                    <Text>
+                        4 full meals away from a free meal!
+                        </Text>
                 </CardItem>
                 <CardItem>
                 <ProgressBarAnimated
             value={100}
-            width={75}
+            width={26}
           />
           <ProgressBarAnimated
-            value={80}
-            width={75}
+            value={100}
+            width={26}
+          />
+           
+          <ProgressBarAnimated
+            value={100}
+            width={26}
+          />
+           
+          <ProgressBarAnimated
+            value={100}
+            width={26}
+          />
+          
+          <ProgressBarAnimated
+            value={100}
+            width={26}
+          />
+          
+          <ProgressBarAnimated
+            value={100}
+            width={26}
           />
           <ProgressBarAnimated
             value={0}
-            width={75}
+            width={26}
           />
           <ProgressBarAnimated
             value={0}
-            width={75}
+            width={26}
+          />
+          <ProgressBarAnimated
+            value={0}
+            width={26}
+          />
+          <ProgressBarAnimated
+            value={0}
+            width={26}
           />
                 </CardItem>
             </Card>
