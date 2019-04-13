@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button,
-  TouchableOpacity
-} from "react-native";
+import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
+import { Button } from "native-base";
 
 export default class ListItem extends React.Component {
   constructor(props) {
@@ -54,7 +48,7 @@ export default class ListItem extends React.Component {
           />
           <View
             style={{
-              padding: 16
+              padding: 5
             }}
           >
             <Text
@@ -81,35 +75,34 @@ export default class ListItem extends React.Component {
             >
               {this.props.label}
             </Text>
-            <View
+
+            <Text
               style={{
-                flex: 1,
-                flexDirection: "row",
-                justifyContent: "space-between"
-                //width: "100%"
+                fontSize: 21,
+                fontWeight: "bold",
+                color: "#ef6136"
               }}
             >
-              <Text
-                style={{
-                  fontSize: 21,
-                  fontWeight: "bold",
-                  color: "#ef6136"
-                }}
-              >
-                {this.props.price}
-              </Text>
-              {/* <Button
-                onPress={e => alert("Hey")}
-                title="ADD"
-                style={{
-                  backgroundColor: "4099ff",
-                  color: "#fff",
-                  paddingLeft: 16,
-                  paddingRight: 16,
-                  paddingTop: 8,
-                  paddingBottom: 8
-                }}
-              /> */}
+              {this.props.price}
+            </Text>
+            <View
+              style={{
+                marginLeft: 120
+              }}
+            >
+              <Button small primary>
+                <Text
+                  style={{
+                    fontSize: 15,
+                    fontWeight: "bold",
+                    color: "#FFFFFF",
+                    marginLeft: 4,
+                    marginRight: 4
+                  }}
+                >
+                  Ordered: {this.props.quantity}
+                </Text>
+              </Button>
             </View>
           </View>
         </View>
@@ -117,3 +110,14 @@ export default class ListItem extends React.Component {
     );
   }
 }
+
+/*
+style={{
+                  backgroundColor: "4099ff",
+                  color: "#fff",
+                  paddingLeft: 16,
+                  paddingRight: 16,
+                  paddingTop: 8,
+                  paddingBottom: 8
+                }}
+*/

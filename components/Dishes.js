@@ -16,6 +16,13 @@ import CartButton from "./common/CartButton";
 export default class Dishes extends React.Component {
   constructor(props) {
     super(props);
+    const quantities = {};
+    foodData.forEach(item => {
+      quantities[item.id] = 0;
+    });
+    this.state = {
+      quantities
+    };
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -35,8 +42,13 @@ export default class Dishes extends React.Component {
     };
   };
 
-  handleNaviagation = () => {
-    this.props.navigation.navigate("Dishes");
+  handleNaviagation = id => {
+    //this.props.navigation.navigate("Dishes");
+    const quantities = this.state.quantities;
+    quantities[id]++;
+    this.setState({
+      quantities
+    });
   };
   render() {
     return (
@@ -44,6 +56,7 @@ export default class Dishes extends React.Component {
         <FlatList
           data={foodData}
           keyExtractor={item => item.id}
+          extraData={this.state}
           renderItem={({ item }) => (
             <ListItem
               name={item.name}
@@ -52,7 +65,8 @@ export default class Dishes extends React.Component {
               price={item.price}
               label={item.label}
               isVegetarian={item.isVegetarian}
-              handleNaviagation={this.handleNaviagation}
+              handleNaviagation={() => this.handleNaviagation(item.id)}
+              quantity={this.state.quantities[item.id]}
             />
           )}
         />

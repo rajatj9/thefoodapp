@@ -18,28 +18,6 @@ class CartButton extends React.Component {
           style={{ width: 32, height: 32, marginRight: 16 }}
           source={require("../../assets/shopping-bag.png")}
         />
-        <View
-          style={{
-            height: 20,
-            width: 20,
-            borderRadius: 10,
-            backgroundColor: "#ef6136",
-            position: "absolute",
-            right: 8,
-            top: 2
-          }}
-        >
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 13,
-              textAlign: "center",
-              lineHeight: 20
-            }}
-          >
-            12
-          </Text>
-        </View>
       </TouchableOpacity>
     );
   }
