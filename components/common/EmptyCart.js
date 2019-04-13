@@ -7,7 +7,7 @@ class EmptyCart extends React.Component {
       <View style={styles.container}>
         <View>
           <Image
-            source={require("../../../assets/empty-bag.png")}
+            source={require("../../assets/empty-bag.png")}
             style={{ width: 150, height: 150, marginBottom: 12 }}
           />
           <Text
@@ -20,7 +20,6 @@ class EmptyCart extends React.Component {
           >
             Cart is empty!
           </Text>
-          <EmptyCart />
         </View>
       </View>
     );

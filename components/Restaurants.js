@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity
 } from "react-native";
-import restaurantsData from "../api/restaurants.json";
+import restaurantsData from "../api/restaurants";
 import RestaurantItem from "./RestaurantItem";
 import CartButton from "./common/CartButton";
 

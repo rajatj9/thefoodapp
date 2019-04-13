@@ -9,21 +9,21 @@ import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../components/Restaurants";
 import LinksScreen from "../screens/LinksScreen";
 import HistoryScreen from "../screens/HistoryScreen";
+import Dishes from "../components/Dishes";
+import Cart from "../components/Cart";
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen
+  Home: HomeScreen,
+  Dishes: Dishes,
+  Cart: Cart
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: "Home",
+  tabBarLabel: "Eat Now",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === "ios"
-          ? `ios-information-circle${focused ? "" : "-outline"}`
-          : "md-information-circle"
-      }
+      name={Platform.OS === "ios" ? `ios-navigate` : "md-navigate"}
     />
   )
 };
@@ -58,6 +58,5 @@ HistoryStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
   HistoryStack
 });
